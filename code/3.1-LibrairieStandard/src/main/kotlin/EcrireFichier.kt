@@ -2,7 +2,7 @@ package org.example
 
 import java.io.File
 
-fun main(args: Array<String>){
+fun main(){
 
    val fichier = File("vide.txt")
     if (fichier.createNewFile()) {
