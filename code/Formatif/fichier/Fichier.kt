@@ -36,6 +36,7 @@ fun ecrire(args: Array<String>): Int {
         val nomFichier : String = args[0]
         val contenue : String = args[1]
         val fichier1 : File = File(nomFichier)
+        fichier1.createNewFile()
         fichier1.writeText(contenue)
 
         return 1
