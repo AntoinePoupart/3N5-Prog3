@@ -30,6 +30,7 @@ class MonAdapter : ListAdapter<Album, MonAdapter.MonItemViewHolder>(MonItemDiffC
                 // Démarrer l'activité de détails
                 binding.root.context.startActivity(intent)
             }
+
         }
     }
 
