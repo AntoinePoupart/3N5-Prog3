@@ -25,11 +25,11 @@ class MainActivity : AppCompatActivity() {
         adapter = MonAdapter() // Créer l'adapteur
         binding.rvMonAdapter.adapter = adapter // Assigner l'adapteur au RecyclerView
         binding.rvMonAdapter.setHasFixedSize(true) // Option pour améliorer les performances
-        binding.rvMonAdapter.addItemDecoration( // Ajouter un séparateur entre chaque élément
-            DividerItemDecoration(
-                binding.rvMonAdapter.context, DividerItemDecoration.VERTICAL
-            )
-        )
+//        binding.rvMonAdapter.addItemDecoration( // Ajouter un séparateur entre chaque élément
+//            DividerItemDecoration(
+//                binding.rvMonAdapter.context, DividerItemDecoration.VERTICAL
+//            )
+//        )
     }
 
     private fun fillRecycler() {
@@ -38,10 +38,13 @@ class MainActivity : AppCompatActivity() {
 //            items.add("Item #$i")
 //        }
         val items: MutableList<Album> = mutableListOf(
-            Album(id = 1, name="Antigéographiquement", artistName = "artiste 1"),
+            Album(id = 1, name="Opium Dreams", artistName = "Homicide Gang"),
             Album(id = 2, name = "Whole lotta red", artistName = "Playboi Carti"),
             Album(id = 3, name="Love Last Forever", artistName = "Destroy Lonely"),
-            Album(id = 4, name="A Great Chaos", artistName = "Ken Carson")
+            Album(id = 4, name="Luv is Rage 2", artistName = "Lil Uzi Vert"),
+            Album(id = 5, name="No Stylist", artistName = "Destroy Lonely"),
+            Album(id = 6, name="World On Fire", artistName = "Lancey Foux"),
+            Album(id = 7, name="Astroworld", artistName = "Travis Scott")
         )
         //val album = mutableListOf(
 

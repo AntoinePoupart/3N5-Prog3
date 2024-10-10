@@ -1,11 +1,13 @@
 package adapters
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import models.Album
+import org.poupart.DetailAlbumActivity
 import org.poupart.databinding.ActivityMainBinding
 import org.poupart.databinding.ItemAlbumBinding
 
@@ -16,6 +18,18 @@ class MonAdapter : ListAdapter<Album, MonAdapter.MonItemViewHolder>(MonItemDiffC
         fun bind(item: Album) {
             binding.album.text = item.name // On affiche l'élément dans le TextView
             binding.artist.text = item.artistName
+            // Définir l'action lors du clic sur l'item
+            binding.root.setOnClickListener {
+                val intent = Intent(binding.root.context, DetailAlbumActivity::class.java)
+
+                // Passer l'objet Album via l'Intent
+                intent.putExtra("albumName", item.name)
+                intent.putExtra("albumArtist", item.artistName)
+
+
+                // Démarrer l'activité de détails
+                binding.root.context.startActivity(intent)
+            }
         }
     }
 
