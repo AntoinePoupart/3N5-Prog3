@@ -15,7 +15,7 @@ class MonAdapter : ListAdapter<Album, MonAdapter.MonItemViewHolder>(MonItemDiffC
     inner class MonItemViewHolder(private val binding: ItemAlbumBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(item: Album) {
             binding.album.text = item.name // On affiche l'élément dans le TextView
-            binding.album.text = item.artistName
+            binding.artist.text = item.artistName
         }
     }
 
