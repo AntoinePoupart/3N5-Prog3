@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
 //            items.add("Item #$i")
 //        }
         val items: MutableList<Album> = mutableListOf(
-            Album(id = 1, name="Opium Dreams", artistName = "Homicide Gang"),
+            Album(id = 1, name="Opium Dreams", artistName = "Homixide Gang"),
             Album(id = 2, name = "Whole lotta red", artistName = "Playboi Carti"),
             Album(id = 3, name="Love Last Forever", artistName = "Destroy Lonely"),
             Album(id = 4, name="Luv is Rage 2", artistName = "Lil Uzi Vert"),

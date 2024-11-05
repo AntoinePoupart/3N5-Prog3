@@ -30,6 +30,15 @@ class MonAdapter : ListAdapter<Album, MonAdapter.MonItemViewHolder>(MonItemDiffC
                 // Démarrer l'activité de détails
                 binding.root.context.startActivity(intent)
             }
+            binding.btnSupprimer.setOnClickListener {
+                val liste = currentList.toMutableList()
+
+                val index = liste.indexOf(item)
+                liste.removeAt(index)
+                submitList(liste)
+
+            }
+
 
         }
     }
