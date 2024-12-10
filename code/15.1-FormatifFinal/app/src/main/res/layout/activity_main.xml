@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:padding="0dp">
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
 
     <!-- Weight pour le 1/3 de la hauteur d'une page -->
     <LinearLayout
@@ -29,7 +30,8 @@
 
     </LinearLayout>
 
-    <!-- Pour avoir le même espace entre le bouton les deux view entre le bouton -->
+    <!-- Pour avoir le même espace entre le bouton : faire les deux view entre le bouton avec weight de 1
+          ou faire un nouveau linear layout et faire un gravity center -->
     <View
         android:layout_width="match_parent"
         android:layout_height="0dp"
