@@ -1,14 +1,14 @@
 plugins {
     alias(libs.plugins.android.application)
-    alias(libs.plugins.jetbrains.kotlin.android)
+    alias(libs.plugins.kotlin.android)
 }
 
 android {
-    namespace = "org.poupart"
+    namespace = "com.example.a152_formatif_recyclerview"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "org.poupart"
+        applicationId = "com.example.a152_formatif_recyclerview"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
@@ -33,8 +33,6 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
-
-
 }
 
 dependencies {
