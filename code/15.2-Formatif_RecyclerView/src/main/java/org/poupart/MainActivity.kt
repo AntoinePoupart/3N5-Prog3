@@ -13,6 +13,10 @@ import org.poupart.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
+    //Ne pas oublier de mettre dans le build.gradle.kts le
+    //    buildFeatures{
+    //        viewBinding = true
+    //    }
     private lateinit var binding : ActivityMainBinding
     private lateinit var adapter: VersionAdapter
 

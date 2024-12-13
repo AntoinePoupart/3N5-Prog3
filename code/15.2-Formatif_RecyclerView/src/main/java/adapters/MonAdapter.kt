@@ -1,22 +1,33 @@
 package adapters
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import models.Version
+import org.poupart.DetailVersion
 import org.poupart.databinding.MonItemBinding
 
 
 class VersionAdapter : ListAdapter<Version, VersionAdapter.VersionItemViewHolder>(VersionItemDiffCallback) {
 
-    // binding nous permet d'accéder à tout le champs de notre layout Version_item.xml
+
     inner class VersionItemViewHolder(private val binding: MonItemBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(version: Version) {
             binding.tvVersion.text = version.version
             binding.tvCodeName.text = version.nomVersion
 
+            // Définir l'action lors du clic sur l'item
+            binding.root.setOnClickListener {
+                val intent: Intent = Intent(binding.root.context, DetailVersion::class.java)
+                // Récupérer les même intent donne que dans le DetailVersion
+                intent.putExtra("version", version.version)
+                intent.putExtra("nomVersion", version.nomVersion)
+                // Démarrer l'activité SecondActivity
+                binding.root.context.startActivity(intent)
+            }
         }
     }
 
