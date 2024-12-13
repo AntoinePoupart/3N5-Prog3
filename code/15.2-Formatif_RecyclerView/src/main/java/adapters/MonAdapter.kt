@@ -13,11 +13,11 @@ import org.poupart.databinding.MonItemBinding
 
 class VersionAdapter : ListAdapter<Version, VersionAdapter.VersionItemViewHolder>(VersionItemDiffCallback) {
 
-
+//Changer version par le nom du models en faisant ctrl + r
     inner class VersionItemViewHolder(private val binding: MonItemBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(version: Version) {
             binding.tvVersion.text = version.version
-            binding.tvCodeName.text = version.nomVersion
+            binding.tvNomVersion.text = version.nomVersion
 
             // Définir l'action lors du clic sur l'item
             binding.root.setOnClickListener {
@@ -46,6 +46,7 @@ object VersionItemDiffCallback : DiffUtil.ItemCallback<Version>() {
         return oldItem == newItem
     }
 
+    //Changer le nom du olditem et newitem par les noms données dans le models
     override fun areContentsTheSame(oldItem: Version, newItem: Version): Boolean {
         return oldItem.version == newItem.version &&
                 oldItem.nomVersion == newItem.nomVersion
