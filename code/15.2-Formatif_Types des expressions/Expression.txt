@@ -1,0 +1,12 @@
+Types des expressions
+
+var a           = 11 * 2
+val b           = a > 20
+var c           = a * 3.0f
+val d           = "examen " + a.toString()
+
+
+a valeur : 22                 type : Int
+b valeur : true               type : Boolean
+c valeur : 66.0               type : Float
+d valeur : "examen 22"        type : String
